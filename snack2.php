@@ -16,10 +16,10 @@
   if(strlen($dati['nome']) <= 3) {
     echo "inserire più lettere";
   }
-  elseif(strpos($dati.['mail'], '@') === false ) { // || strpos($dati.['email'], '.')) {
-    echo "inserire i caratteri corretti";
+  elseif(strpos($dati['email'], '@') === false || strpos($dati.['email'], '.') === false)  {
+    echo "inserire email valida";
   }
-  elseif(is_numeric($dati['eta'])) {
+  elseif(!is_numeric($dati['eta'])) {
     echo "inserire un numero";
   }
   else{
